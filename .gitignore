@@ -42,3 +42,5 @@ Thumbs.db
 sparky_project/project
 sparky_project/target
 sparky_project/.bsp
+
+.metals/
