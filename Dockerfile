@@ -42,6 +42,6 @@ RUN echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | tee /etc/ap
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+COPY ./sparky_project /app
 
 CMD ["bash"]

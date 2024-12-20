@@ -3,8 +3,8 @@ services:
     image: sparky:obahi
     build: .
     container_name: sparky
-    # volumes:
-    #   - /goinfre/obahi/sparky/src:/app/src
+    volumes:
+      - $PWD/sparky_project:/app/sparky_project
     ports: [4040:4040]
     working_dir: /app
     command: bash
