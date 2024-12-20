@@ -1,0 +1,18 @@
+services:
+  spark-app:
+    image: sparky:obahi
+    build: .
+    container_name: sparky
+    # volumes:
+    #   - /goinfre/obahi/sparky/src:/app/src
+    ports: [4040:4040]
+    working_dir: /app
+    command: bash
+# volumes:
+#   sparky:
+#     name: sparky
+#     driver: local
+#     driver_opts:
+#       device: $PWD/src
+#       o: bind
+#       type: none
