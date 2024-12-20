@@ -1,37 +1,29 @@
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.rdd.RDD
 
 object MainApp {
   def main(args: Array[String]): Unit = {
-    // Initialiser SparkSession
+    // Initialize SparkSession
     val spark = SparkSession.builder()
       .appName("Scala Spark Project")
       .master("local[*]")
       .getOrCreate()
 
-    // Lecture du fichier CSV
+    // Read CSV file
     val filePath = "src/main/data/empData.csv"
-    val rdd: RDD[String] = spark.sparkContext.textFile(filePath)
+    val df = spark.read.option("header", "true").csv(filePath)
 
-    // Supprimer l'entête
-    val header = rdd.first()
-    val rddWithoutHeader = rdd.filter(line => line != header)
+    // Display data without header
+    println("Data without header:")
+    df.show(5, false)
 
-    // Afficher les données sans entête
-    println("Données sans entête :")
-    rddWithoutHeader.take(5).foreach(println)
+    // Create a new DataFrame with specific fields
+    val selectedFieldsDF = df.select("ename", "designation", "salary")
 
-    // Créer un nouveau RDD contenant les champs spécifiques
-    val selectedFieldsRDD = rddWithoutHeader.map { line =>
-      val cols = line.split(",")
-      (cols(1), cols(2), cols(3)) // ename, designation, salary
-    }
+    // Display selected fields
+    println("Selected fields (ename, designation, salary):")
+    selectedFieldsDF.show(5, false)
 
-    // Afficher les champs sélectionnés
-    println("Champs sélectionnés (ename, designation, salaire) :")
-    selectedFieldsRDD.take(5).foreach(println)
-
-    // Fermer SparkSession
+    // Stop SparkSession
     spark.stop()
   }
 }

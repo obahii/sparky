@@ -1,0 +1,70 @@
+2024.12.20 03:34:36 INFO  Started: Metals version 1.4.2 in folders '/goinfre/obahi/sparky' for client Visual Studio Code 1.89.1.
+2024.12.20 03:34:37 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+Dec 20, 2024 3:46:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://07312eb8-3ce7-4812-848f-e484c424febd/response_0/1#%7B%22references%22%3A%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22%2Fgoinfre%2Fobahi%2Fsparky%2Fsparky_project%2Fsrc%2Fmain%2Fscala%2FMain.scala%22%2C%22external%22%3A%22file%3A%2F%2F%2Fgoinfre%2Fobahi%2Fsparky%2Fsparky_project%2Fsrc%2Fmain%2Fscala%2FMain.scala%22%2C%22path%22%3A%22%2Fgoinfre%2Fobahi%2Fsparky%2Fsparky_project%2Fsrc%2Fmain%2Fscala%2FMain.scala%22%2C%22scheme%22%3A%22file%22%7D%2C%22range%22%3A%7B%22startLineNumber%22%3A3%2C%22startColumn%22%3A1%2C%22endLineNumber%22%3A38%2C%22endColumn%22%3A1%7D%7D%5D%7D"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:771)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:718)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+2024.12.20 03:46:59 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:46:59 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:01 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:01 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:02 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:02 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:04 WARN  no build target for: /goinfre/obahi/sparky/sparky_project/build.sbt
+2024.12.20 03:47:04 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:17 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:17 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:18 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:20 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:20 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:21 WARN  no build target for: /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala
+2024.12.20 03:47:21 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:21 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:21 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:47:22 WARN  no build target for: /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala
+2024.12.20 03:47:22 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:46 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:46 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:47 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:47 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:48 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:49 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/build.sbt. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:49 WARN  no build target for: /goinfre/obahi/sparky/sparky_project/build.sbt
+2024.12.20 03:48:54 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:54 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:54 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:54 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:55 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:55 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:55 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:57 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2024.12.20 03:48:57 WARN  no build target for: /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala
+2024.12.20 03:49:27 INFO  no build target found for /goinfre/obahi/sparky/sparky_project/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.4
