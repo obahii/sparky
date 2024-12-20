@@ -1,13 +1,17 @@
 services:
   spark-app:
-    image: sparky:obahi
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sparky:0.1
     container_name: sparky
     volumes:
-      - $PWD/sparky_project:/app/sparky_project
-    ports: [4040:4040]
-    # working_dir: /app
+      - ./sparky_project:/app/sparky_project
+    ports:
+      - "4040:4040"
     command: bash
+    stdin_open: true
+    tty: true
 # volumes:
 #   sparky:
 #     name: sparky
