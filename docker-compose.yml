@@ -7,7 +7,7 @@ services:
       - $PWD/sparky_project:/app/sparky_project
     ports: [4040:4040]
     # working_dir: /app
-    # command: bash
+    command: bash
 # volumes:
 #   sparky:
 #     name: sparky
