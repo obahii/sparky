@@ -1,0 +1,44 @@
+# SBT specific
+target/
+project/target/
+project/project/
+.cache/
+lib_managed/
+src_managed/
+.ensime_cache/
+.idea/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# Spark specific
+metastore_db/
+derby.log
+
+# Eclipse specific
+.classpath
+.project
+.settings/
+
+# IntelliJ specific
+*.iml
+.idea/
+*.iws
+out/
+
+# VS Code specific
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Spark project specific
+sparky_project/project
+sparky_project/target
+sparky_project/.bsp

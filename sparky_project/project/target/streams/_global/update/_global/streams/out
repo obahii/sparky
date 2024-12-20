@@ -1,7 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
-[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/app/sparky_project/project/"), "sparky_project-build")...[0m
-[0m[[0m[0minfo[0m] [0m[0mUpdating sparky_project-build[0m
-[0m[[0m[0minfo[0m] [0m[0mResolved sparky_project-build dependencies[0m
-[0m[[0m[0minfo[0m] [0m[0mFetching artifacts of sparky_project-build[0m
-[0m[[0m[0minfo[0m] [0m[0mFetched artifacts of sparky_project-build[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/app/sparky_project/project/"), "sparky_project-build")[0m

@@ -1,5 +1,5 @@
 import org.apache.spark.sql.SparkSession
-
+import org.apache.log4j.{Level, Logger}
 object MainApp {
   def main(args: Array[String]): Unit = {
     // Initialize SparkSession
@@ -8,22 +8,12 @@ object MainApp {
       .master("local[*]")
       .getOrCreate()
 
+    val sc = spark.sparkContext
     // Read CSV file
     val filePath = "src/main/data/empData.csv"
-    val df = spark.read.option("header", "true").csv(filePath)
-
-    // Display data without header
-    println("Data without header:")
-    df.show(5, false)
-
-    // Create a new DataFrame with specific fields
-    val selectedFieldsDF = df.select("ename", "designation", "salary")
-
-    // Display selected fields
-    println("Selected fields (ename, designation, salary):")
-    selectedFieldsDF.show(5, false)
-
-    // Stop SparkSession
+    val rdd = sc.textFile(filePath)
+    val header = rdd.first()
+    rdd.collect().foreach(line => if (line != header) println(line))
     spark.stop()
   }
 }
