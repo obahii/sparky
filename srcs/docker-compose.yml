@@ -1,0 +1,37 @@
+services:
+  spark:
+    image: spark:bmeek
+    build: ./requirements/spark
+    container_name: spark
+    env_file: .env
+    volumes:
+      - spark:/app/tp
+    ports:
+      - "4040:4040"
+    networks:
+      - net
+    restart: always
+    depends_on:
+      - mariadb
+    command: bash
+    stdin_open: true
+    tty: true
+  mariadb:
+    image: mariadb:bmeek
+    build: ./requirements/mariadb
+    container_name: mariadb
+    env_file: .env
+    networks:
+      - net
+    restart: always
+networks:
+  net:
+    driver: bridge
+volumes:
+  spark:
+    name: spark
+    driver: local
+    driver_opts:
+      device: ./requirements/spark/tp
+      o : bind
+      type : none
