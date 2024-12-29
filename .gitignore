@@ -44,3 +44,4 @@ sparky_project/target
 sparky_project/.bsp
 
 .metals/
+.env
